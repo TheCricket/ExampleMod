@@ -1,0 +1,16 @@
+[
+{
+  "modid": "example",
+  "name": "Example Mod",
+  "description": "A good starting point into modded mc",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Cricket"],
+  "credits": "Cricket for the great tutorials :D",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

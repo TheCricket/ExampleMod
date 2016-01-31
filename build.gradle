@@ -1,0 +1,48 @@
+buildscript {
+    repositories() {
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+//Version of your mod
+version = "1.0"
+//This should be the package your @Mod class is in
+group = "com.example.example"
+//This should be your modid
+archivesBaseName = "example"
+minecraft {
+	//The version of minecraft and forge you are developing for
+    version = "1.8.9-11.15.0.1688"
+	//Run Dir is the directory minecraft will store files like saves and configs in
+    runDir = "run"
+	//Mappings are what forge uses to convert func_149645_b () to getRenderType() for example
+    mappings = "snapshot_20160130"
+}
+
+//This is for building the jar don't worry about it
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

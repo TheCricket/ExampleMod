@@ -1,5 +1,6 @@
 package com.example.example.proxy;
 
+import com.example.example.client.ItemModelRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -7,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ClientProxy implements IProxy {
     @Override
     public void preInit(FMLPreInitializationEvent event) {
-
+        ItemModelRegistry.init();
     }
 
     @Override

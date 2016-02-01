@@ -1,6 +1,8 @@
 # ExampleMod
 Getting started with minecraft modding? Check out this example!
 
+Current Verion: 1.8.9
+
 ## Getting Started
 Welcome to the wonderful world of modding. When you start it may seem extremely tough and all the tutorials out there are hard and confusing. Just start with the basics, add an item, then move to a block. You never want to start out making the next thaumcraft or the next thermal expansion. You will get easily frustrated and want to quit and I never want anyone to get that feeling.
 My first tip is know an object oriented programming language or an OOP. Java is an OOP and will be pretty easy to learn with modding if you haven't touched it before. If you don't know any OOP's at all then you should learn to write basic java programs first that way you are familiar with the syntax and formatting that goes along with it. Knowing how to fix the errors that syntax errors and casting can produce is the next step. When learning a language make mistakes on purpose that way you know exactly where it is wrong and what error message is given. That way if you ever receive an error message in the future you will know what types of things you did so you can fix it.

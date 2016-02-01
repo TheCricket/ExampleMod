@@ -1,6 +1,8 @@
 package com.example.example;
 
+import com.example.example.proxy.IProxy;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -12,6 +14,9 @@ public class ExampleMod {
     public static final String MODNAME = "Example Mod";
     public static final String VERSION = "1.0";
 
+    @SidedProxy(clientSide = "com.example.example.ClientProxy", serverSide = "com.example.example.ServerProxy")
+    public IProxy proxy;
+
     @Mod.Instance
     public static ExampleMod instance;
 
@@ -21,7 +26,7 @@ public class ExampleMod {
      */
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        proxy.preInit(event);
     }
 
     /**
@@ -30,7 +35,7 @@ public class ExampleMod {
      */
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
+        proxy.init(event);
     }
 
     /**
@@ -38,6 +43,6 @@ public class ExampleMod {
      */
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
+        proxy.postInit(event);
     }
 }
